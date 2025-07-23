@@ -1,0 +1,4 @@
+date: 07/23/2025
+type: Set up
+details: downloading rust and setting it up
+time: 
