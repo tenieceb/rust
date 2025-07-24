@@ -1,0 +1,28 @@
+main.rs
+  - Initialize program
+  - Show menu options:
+      1. Add new mood entry
+      2. Review previous entries
+      3. Exit
+  - Based on user choice:
+      - If 1: prompt user for mood, date (optional)
+              call emotion module to create mood entry
+              call emotion_file module to save entry
+      - If 2: call emotion_file module to read saved entries
+              display entries with emotion_color module for color coding
+      - If 3: exit program
+
+emotion.rs
+  - Define Emotion struct (mood, color, date)
+  - Functions to create new Emotion from input
+  - Functions to format/display Emotion
+
+emotion_color.rs
+  - Function to map mood strings to color codes or colored output
+
+emotion_file.rs
+  - Functions to write Emotion data to file
+  - Functions to read Emotion data from file
+  - Handle file I/O errors gracefully
+
+
