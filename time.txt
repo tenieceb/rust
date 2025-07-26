@@ -8,3 +8,13 @@ type: Pseudo Code
 details: creating a pseudo code to outline what my program needs and what I want it to do
 time: 10 mins
 
+date: 7/25/25
+type: Research
+details: using rust-lang.com to learn about rust
+time: 30 min + 15 mins +30 min +35mins +30 +30 +30+10 + 30
+
+date: 7/25/25
+type: File set up
+details: Using Cargo, build the folder and file structure
+time: 11 mins
+

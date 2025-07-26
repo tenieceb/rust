@@ -1,0 +1,16 @@
+# Ignore build output directory
+/target/
+
+# Ignore Cargo.lock if this is a library crate (optional)
+# Uncomment if your project is a library
+# /Cargo.lock
+
+# Ignore VSCode settings folder
+.vscode/
+
+# Ignore JetBrains IDE folder (IntelliJ, CLion, etc.)
+.idea/
+
+# Ignore OS-specific files
+.DS_Store
+Thumbs.db
