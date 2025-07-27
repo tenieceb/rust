@@ -11,10 +11,14 @@ time: 10 mins
 date: 7/25/25
 type: Research
 details: using rust-lang.com to learn about rust
-time: 30 min + 15 mins +30 min +35mins +30 +30 +30+10 + 30
+time: 4 hours
 
 date: 7/25/25
 type: File set up
 details: Using Cargo, build the folder and file structure
 time: 11 mins
 
+date: 7/26/25
+type: Writing code
+details: Writing the program code
+time: 30 min + 30 min +30 +30 +30 +30 + 10
