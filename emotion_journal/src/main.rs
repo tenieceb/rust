@@ -144,5 +144,5 @@ if view_entries.trim().eq_ignore_ascii_case("yes") {
 
 
 
-    println!("\nThank you for using MoodStitch! 🌈🧵");
+    println!("\nThank you for using MoodStitch!");
 }}  
