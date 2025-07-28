@@ -11,14 +11,29 @@ time: 10 mins
 date: 7/25/25
 type: Research
 details: using rust-lang.com to learn about rust
-time: 4 hours
+time: 5 hours
 
 date: 7/25/25
 type: File set up
 details: Using Cargo, build the folder and file structure
-time: 11 mins
+time: 15 mins
 
 date: 7/26/25
 type: Writing code
 details: Writing the program code
-time: 30 min + 30 min +30 +30 +30 +30 + 10
+time: 5 hours
+
+date: 7/26/25
+Type: testing
+details: Testing code and debugging any issues
+time: 1 hour
+
+date: 7/27/25
+type: Write README.md
+details: write up the read me file
+time: 20 mins
+
+date: 7/28/25
+type: Record Video
+details: recorded video and uploaded it to Youtube.
+time: 30 mins

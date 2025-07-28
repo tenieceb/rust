@@ -1,32 +1,35 @@
 # Overview
 
-{Important! Do not say in this section that this is college assignment. Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-{Provide a description of the software that you wrote to demonstrate the Rust language.}
+This project is a Rust-based emotion tracker that allows users to log daily emotional entries, each tagged with a date, emotion, color (based on emotion), and an optional note. The entries are saved into a plain text file for future reference.
 
-{Describe your purpose for writing this software.}
+The purpose of this software was to demonstrate core Rust concepts such as variables, conditionals, loops, functions with ownership, and object-oriented features using structs and impl blocks. It helped reinforce my understanding of Rust's strict type system, ownership rules, and modular structure.
 
-{Provide a link to your YouTube demonstration. It should be a 4-5 minute demo of the software running and a walkthrough of the code. Focus should be on sharing what you learned about the language syntax.}
-
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://www.youtube.com/watch?v=6_6oHhLony8)
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+Code Editor: Visual Studio Code
 
-{Describe the programming language that you used and any libraries.}
+Compiler: rustc (Rust compiler)
+
+Toolchain: Rustup with stable channel
+
+Terminal: PowerShell & Cargo for running and testing
+
+This project was developed in the Rust programming language. No external libraries were used — only the Rust standard library and modules written for the application (e.g., storage.rs, display.rs).
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [The Rust Book (official)](https://doc.rust-lang.org/book/)
+- [Rust By Example](https://doc.rust-lang.org/rust-by-example/)
+- [Rust Playground](https://play.rust-lang.org/)
 
 # Future Work
 
-{Make a list of things that you need to fix, improve, and add in the future.}
-
-- Item 1
-- Item 2
-- Item 3
+- Store data in a local SQLite or cloud database instead of a flat text file
+- Create a web interface using Rust + WebAssembly or integrate with a web frontend
+- Encrypt data for privacy and security
+- Create a device app that will link to the website data and have more options for the user to set up daily reminders, save fabric name/yarn name, stitch or pattern, etc.
+- Catch potential input errors
+- Upgrade it to also include the option to create a blanket pattern using the user's choice of weather data. Also known as a temperature blanket.
