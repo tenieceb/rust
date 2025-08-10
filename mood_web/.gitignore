@@ -1,0 +1,16 @@
+# Ignore build artifacts
+/target/
+
+# Ignore editor files
+*.swp
+*.swo
+*.DS_Store
+
+# Ignore environment files
+.env
+
+# Ignore logs
+*.log
+
+# Ignore OS files
+Thumbs.db

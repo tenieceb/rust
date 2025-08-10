@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Entry</title>
+</head>
+<body>
+    <h1>Submit Your Mood</h1>
+    <form action="/submit" method="post">
+        <label>Date: <input type="date" name="date" required></label><br><br>
+        <label>Emotion:
+        <fieldset>
+          <legend>Select your mood:</legend>
+          <label><input type="radio" name="emotion" value="happy" required> Happy</label><br>
+          <label><input type="radio" name="emotion" value="sad"> Sad</label><br>
+          <label><input type="radio" name="emotion" value="angry"> Angry</label><br>
+          <label><input type="radio" name="emotion" value="anxious"> Anxious</label><br>
+          <label><input type="radio" name="emotion" value="excited"> Excited</label><br>
+          <label><input type="radio" name="emotion" value="relaxed"> Relaxed</label><br>
+          <label><input type="radio" name="emotion" value="grateful"> Grateful</label><br>
+          <label>
+            <input type="radio" name="emotion" value="other" id="otherRadio"> Other:
+            <input type="text" id="otherInput" name="other_emotion" placeholder="Type your mood here" disabled>
+          </label>
+        </fieldset>
+        </label><br><br>
+        <label>Note:<br>
+            <textarea name="note" rows="3" cols="30"></textarea>
+        </label><br><br>
+        <button type="submit">Save Mood</button>
+    </form>
+    <br>
+    <a href="/list">View Past Moods</a>
+    <a href="/blanket">View Your Mood Blanket</a>
+</body>
+</html>

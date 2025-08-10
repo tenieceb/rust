@@ -1,0 +1,19 @@
+date: 08/7/2025
+type: Studying
+details: Researched Actix Web on https://actix.rs/
+time: 2 hours
+
+date: 8/8/2025
+type: Studying
+details: Researched Actix Web on https://actix.rs/
+time: 2 hours
+
+date: 8/8/2025
+type: Set up
+details: setting up files and project folders
+time: 2 hours
+
+date: 08/09/2025
+type: Writing Code
+details: Writing the Code and bare bones html for the program
+time: 3 hours

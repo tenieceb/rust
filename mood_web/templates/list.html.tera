@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Past Mood Entries</title>
+</head>
+<body>
+    <h1>Your Mood History</h1>
+    <table border="1" cellpadding="5" cellspacing="0">
+        <tr><th>Date</th><th>Emotion</th><th>Color</th><th>Note</th></tr>
+        {% for entry in entries %}
+        <tr style="background-color: {{ entry.color }};">
+            <td>{{ entry.date }}</td>
+            <td>{{ entry.emotion }}</td>
+            <td>{{ entry.color }}</td>
+            <td>{{ entry.note | default(value="") }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Back to Entry</a>
+    <a href="/blanket">View Your Mood Blanket</a>
+
+</body>
+</html>

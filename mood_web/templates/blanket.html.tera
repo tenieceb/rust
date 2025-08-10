@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mood Blanket</title>
+    <style>
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(7, 50px); /* 7 columns - like days of the week */
+            grid-gap: 4px;
+            margin: 20px;
+        }
+        .cell {
+            width: 50px;
+            height: 50px;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mood Blanket</h1>
+    <div class="grid">
+        {% for entry in entries %}
+            <div class="cell" style="background-color: {{ entry.color }};" title="{{ entry.date }}: {{ entry.emotion }}"></div>
+        {% endfor %}
+    </div>
+    <br>
+    <a href="/">Back to Entry</a>
+    <a href="/list">View Past Moods</a>
+
+</body>
+</html>
