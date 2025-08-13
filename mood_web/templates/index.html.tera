@@ -1,35 +1,59 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mood Entry</title>
+  <meta charset="utf-8">
+  <title>MoodSitch | New Entry</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/index.css">
+  <script src="/static/js/app.js" defer></script>
 </head>
 <body>
-    <h1>Submit Your Mood</h1>
+  <div class="container">
+    <header class="site-header">
+        <h1>Hello, Welcome to <span class="highlight">MoodStitch</span>!</h1>
+        <p>This journal helps you track your emotions and associate them with colors.</p>
+        <p>Over time, it creates a visual representation for your <strong>mood blanket</strong>!</p>
+    </header>
+    <h2> New Entry </h2>
+    <nav>
+        <a class="btn" href="/">New Entry</a>
+        <a href="/list">Past Moods</a>
+        <a href="/blanket">Mood Blanket</a>
+    </nav>
+
     <form action="/submit" method="post">
-        <label>Date: <input type="date" name="date" required></label><br><br>
-        <label>Emotion:
-        <fieldset>
-          <legend>Select your mood:</legend>
-          <label><input type="radio" name="emotion" value="happy" required> Happy</label><br>
-          <label><input type="radio" name="emotion" value="sad"> Sad</label><br>
-          <label><input type="radio" name="emotion" value="angry"> Angry</label><br>
-          <label><input type="radio" name="emotion" value="anxious"> Anxious</label><br>
-          <label><input type="radio" name="emotion" value="excited"> Excited</label><br>
-          <label><input type="radio" name="emotion" value="relaxed"> Relaxed</label><br>
-          <label><input type="radio" name="emotion" value="grateful"> Grateful</label><br>
-          <label>
-            <input type="radio" name="emotion" value="other" id="otherRadio"> Other:
-            <input type="text" id="otherInput" name="other_emotion" placeholder="Type your mood here" disabled>
+      <label class="label" for="date">Date</label>
+      <input type="date" id="date" name="date" required value="{{ today }}">
+
+      <fieldset style="margin-top: 12px;">
+        <legend>Select your mood</legend>
+
+        <div class="radios">
+          <label><input type="radio" name="emotion" value="happy" required> Happy</label>
+          <label><input type="radio" name="emotion" value="sad"> Sad</label>
+          <label><input type="radio" name="emotion" value="angry"> Angry</label>
+          <label><input type="radio" name="emotion" value="anxious"> Anxious</label>
+          <label><input type="radio" name="emotion" value="excited"> Excited</label>
+          <label><input type="radio" name="emotion" value="relaxed"> Relaxed</label>
+          <label><input type="radio" name="emotion" value="grateful"> Grateful</label>
+        </div>
+
+        <div class="other-wrap">
+          <label style="margin: 0;">
+            <input type="radio" id="emotion-other" name="emotion" value="other"> Other
           </label>
-        </fieldset>
-        </label><br><br>
-        <label>Note:<br>
-            <textarea name="note" rows="3" cols="30"></textarea>
-        </label><br><br>
+          <input type="text" id="other-input" name="other_emotion" placeholder="Type your mood" disabled>
+        </div>
+      </fieldset>
+
+      <label class="label" for="note">Note (optional)</label>
+      <textarea id="note" name="note" rows="4" placeholder="Add a short note..."></textarea>
+
+      <div class="form-actions">
         <button type="submit">Save Mood</button>
+        <span class="helper">Your mood color is set automatically.</span>
+      </div>
     </form>
-    <br>
-    <a href="/list">View Past Moods</a>
-    <a href="/blanket">View Your Mood Blanket</a>
+  </div>
 </body>
 </html>

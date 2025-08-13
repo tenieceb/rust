@@ -1,24 +1,57 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Past Mood Entries</title>
+  <meta charset="utf-8">
+  <title>Past Mood Entries</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/list.css">
 </head>
 <body>
-    <h1>Your Mood History</h1>
-    <table border="1" cellpadding="5" cellspacing="0">
-        <tr><th>Date</th><th>Emotion</th><th>Color</th><th>Note</th></tr>
-        {% for entry in entries %}
-        <tr style="background-color: {{ entry.color }};">
-            <td>{{ entry.date }}</td>
-            <td>{{ entry.emotion }}</td>
-            <td>{{ entry.color }}</td>
-            <td>{{ entry.note | default(value="") }}</td>
-        </tr>
-        {% endfor %}
-    </table>
-    <br>
-    <a href="/">Back to Entry</a>
-    <a href="/blanket">View Your Mood Blanket</a>
+  <div class="container">
+    <header class="site-header">
+        <h1><span class="highlight">MoodStitch</span></h1>
+        
+    </header>
+    <h2> View Past Moods </h2>
+    <nav>
+        <a href="/">New Entry</a>
+        <a class="btn" href="/list">Past Moods</a>
+        <a href="/blanket">Mood Blanket</a>
+    </nav>
 
+    <div class="table-wrap">
+      <table>
+        <thead>
+          <tr>
+            <th>Date</th>
+            <th>Emotion</th>
+            <th>Color</th>
+            <th>Note</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for entry in entries %}
+            <tr>
+                <td>{{ entry.date }}</td>
+                <td>{{ entry.emotion }}</td>
+                <td><div class="color-swatch" style="background-color: {{ entry.color | lower }};"></div></td>
+                <td>{{ entry.note | default(value="None") }}</td>
+              <td>
+                <form action="/delete" method="post" onsubmit="return confirmDelete('{{ entry.date }}')">
+                    <input type="hidden" name="date" value="{{ entry.date }}">
+                    <button type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
 </body>
+<script>
+function confirmDelete(date) {
+    return confirm(`Are you sure you want to delete the entry from ${date}?`);
+}
+</script>
 </html>

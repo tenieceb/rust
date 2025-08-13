@@ -1,31 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Mood Blanket</title>
-    <style>
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(7, 50px); /* 7 columns - like days of the week */
-            grid-gap: 4px;
-            margin: 20px;
-        }
-        .cell {
-            width: 50px;
-            height: 50px;
-            border-radius: 4px;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>Mood Blanket</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="/static/css/blanket.css">
 </head>
 <body>
-    <h1>Mood Blanket</h1>
-    <div class="grid">
-        {% for entry in entries %}
-            <div class="cell" style="background-color: {{ entry.color }};" title="{{ entry.date }}: {{ entry.emotion }}"></div>
-        {% endfor %}
-    </div>
-    <br>
-    <a href="/">Back to Entry</a>
-    <a href="/list">View Past Moods</a>
+  <div class="container">
+    <header class="site-header">
+        <h1><span class="highlight">MoodStitch</span></h1>
+    </header>
+    <h2> View Mood Blanket </h2>
+    <nav>
+        <a href="/">New Entry</a>
+        <a href="/list">Past Moods</a>
+        <a class="btn" href="/blanket">Mood Blanket</a>
+    </nav>
 
+    <div class="blanket-grid">
+      {% for entry in entries %}
+        <div class="cell" style="background: {{ entry.color }};"
+             title="{{ entry.date }} — {{ entry.emotion }}{% if entry.note %} ({{ entry.note }}){% endif %}">
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="key">
+      <span><span class="swatch" style="background: Yellow;"></span> Happy</span>
+      <span><span class="swatch" style="background: Blue;"></span> Sad</span>
+      <span><span class="swatch" style="background: Red;"></span> Angry</span>
+      <span><span class="swatch" style="background: Purple;"></span> Anxious</span>
+      <span><span class="swatch" style="background: Orange;"></span> Excited</span>
+      <span><span class="swatch" style="background: Green;"></span> Relaxed</span>
+      <span><span class="swatch" style="background: Pink;"></span> Grateful</span>
+      <span><span class="swatch" style="background: Grey;"></span> Other</span>
+    </div>
+  </div>
 </body>
 </html>

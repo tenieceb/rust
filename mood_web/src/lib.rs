@@ -90,7 +90,7 @@ pub fn load_entries(filename: &str) -> io::Result<Vec<EmotionEntry>> {
             });
         }
     }
-     entries.sort_by_key(|e| NaiveDate::parse_from_str(&e.date, "%Y-%m-%d").unwrap_or_else(|_| NaiveDate::from_ymd_opt(1970, 1, 1).unwrap()));
-
+    entries.sort_by_key(|e| NaiveDate::parse_from_str(&e.date, "%Y-%m-%d").unwrap_or_else(|_| NaiveDate::from_ymd_opt(1970, 1, 1).unwrap()));
+    entries.reverse(); // Newest first
     Ok(entries)
 }

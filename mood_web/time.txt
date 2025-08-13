@@ -5,8 +5,8 @@ time: 2 hours
 
 date: 8/8/2025
 type: Studying
-details: Researched Actix Web on https://actix.rs/
-time: 2 hours
+details: Researched Actix Web on https://actix.rs/ and tera  templates https://keats.github.io/tera/docs/ 
+time: 5 hours
 
 date: 8/8/2025
 type: Set up
@@ -17,3 +17,14 @@ date: 08/09/2025
 type: Writing Code
 details: Writing the Code and bare bones html for the program
 time: 3 hours
+
+
+date: 08/11/2025
+type: Writing code, debugging
+details: Testing user input, adding styling and script to improve user input. 
+time: 3 hours
+
+date: 8/13/2025
+type: video demo
+details: recorded video demonstration 
+time: 30 mins

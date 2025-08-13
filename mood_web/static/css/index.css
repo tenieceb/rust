@@ -1,0 +1,22 @@
+/* Spacing for the form on the index page */
+.form-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 14px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.radios {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 6px 12px;
+  margin-top: 8px;
+}
+
+.other-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: 6px;
+}
